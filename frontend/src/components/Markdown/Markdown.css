@@ -6,7 +6,8 @@
   background-color: var(--markdown-background);
 }
 
-.markdown pre:has(code) {
+.markdown pre:has(code),
+.markdown :not(pre) > code {
   border-radius: 0.25rem;
   padding: 0.5rem;
   background-color: var(--codeblock-background);

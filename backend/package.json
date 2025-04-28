@@ -4,12 +4,14 @@
   "main": "dist/index.js",
   "license": "ISC",
   "scripts": {
+    "build": "tsc",
     "start": "tsc && node dist/index.js",
     "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"DEV=true nodemon dist/index.js\""
   },
   "dependencies": {
     "express": "^5.1.0",
     "mysql2": "^3.14.0",
+    "path": "^0.12.7",
     "sequelize": "^6.37.7"
   },
   "devDependencies": {

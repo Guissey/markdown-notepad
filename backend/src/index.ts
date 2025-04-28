@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import initDatabase from './database/init';
 import { Note } from './database/models';
 
@@ -6,7 +7,7 @@ initDatabase();
 
 const app = express();
 
-app.use(express.static('../frontend/dist')); // Serve frontend static files
+app.use(express.static(path.resolve(__dirname, '../../frontend/dist'))); // Serve frontend static files
 
 app.use(express.json());
 

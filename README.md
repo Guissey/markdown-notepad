@@ -14,9 +14,12 @@ Features:
 
 TODO:
 - Buttons ergonomy
+- Images import
 - Re-ordering
+- Responsivity for mobile browsers
 - HTTPS
 - User authentification and note attribution
+- Backup
 
 ## Getting started
 
@@ -25,7 +28,7 @@ TODO:
 - git
 - node >= 22
 - npm >= 10
-- MySQL server installed with:
+- MySQL server installed and running with:
   - databases *markdown_notepad* and *markdown_notepad_test*
   - user *webserver* and password *webserver* with rights on the previous databases
 
@@ -51,8 +54,8 @@ npm run start
 
 ### Environment
 
-Open two terminal:
+Open two terminals:
 - in *frontend*: `npm run dev`
 - in *backend*: `npm run dev`
 
-Application will be available at **http://localhost:5173**.
+Application will be available at **http://localhost:5173** with automatic refresh on updates.
