@@ -1,0 +1,11 @@
+:root {
+  /* General */
+  --background: rgb(36, 36, 36);
+  --font-color: rgba(255, 255, 255, 0.871);
+  --primary: #2A7B9B;
+  --secondary: #572A9B;
+
+  /* Markdown */
+  --markdown-background: rgb(26, 26, 26);
+  --codeblock-background: rgb(54, 54, 54);
+}

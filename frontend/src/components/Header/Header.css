@@ -1,0 +1,15 @@
+#app-header {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  background: linear-gradient(
+    90deg,
+    var(--secondary) 0%,
+    var(--primary) 20%,
+    var(--primary) 80%,
+    var(--secondary) 100%
+  );
+}

@@ -1,0 +1,23 @@
+{
+  "name": "markdown-notepad-backend",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "ISC",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"DEV=true nodemon dist/index.js\""
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/sequelize": "^4.28.20",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.3"
+  }
+}

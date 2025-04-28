@@ -1,0 +1,9 @@
+.rename-note-input {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid var(--font-color);
+}

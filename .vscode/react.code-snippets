@@ -1,0 +1,43 @@
+{
+  "useState snippet": {
+    "scope": "typescriptreact",
+    "prefix": "ust",
+    "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState${3/(.*)/<$1>/}($2);$0",
+  },
+
+  "useCallback snippet": {
+    "scope": "typescriptreact",
+    "prefix": "ucb",
+    "body": [
+      "const $1 = useCallback(($2): $3 => {",
+      "  $0",
+      "}, []);"
+    ]
+  },
+
+  "useMemo snippet": {
+    "scope": "typescriptreact",
+    "prefix": "ume",
+    "body": [
+      "const $1 = useMemo${2/(.*)/<$1>/}(() => {",
+      "  $0",
+      "}, []);"
+    ]
+  },
+
+  "useEffect snippet": {
+    "scope": "typescriptreact",
+    "prefix": "uef",
+    "body": [
+      "useEffect(() => {",
+      "  $0",
+      "}, [$1]);"
+    ]
+  },
+
+  "useRef snippet": {
+    "scope": "typescriptreact",
+    "prefix": "ure",
+    "body": "const $1 = useRef<$2>(${3:null});$0"
+  }
+}

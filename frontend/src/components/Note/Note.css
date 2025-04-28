@@ -1,0 +1,36 @@
+.note-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.note-commands {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--markdown-background);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.markdown-view {
+  flex: 1;
+}
+
+.markdown-input {
+  flex: 1;
+  max-width: 720px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--markdown-background);
+  /* Unset textarea default attributes */
+  border: none;
+  outline: none;
+  resize: none;
+}

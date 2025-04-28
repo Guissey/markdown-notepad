@@ -1,0 +1,17 @@
+.markdown {
+  max-width: 720px;
+  overflow-y: auto;
+  padding: 0 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--markdown-background);
+}
+
+.markdown pre:has(code) {
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  background-color: var(--codeblock-background);
+}
+
+.markdown thead {
+  background-color: var(--codeblock-background);
+}
