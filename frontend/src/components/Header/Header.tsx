@@ -2,7 +2,9 @@ import './Header.css';
 
 const Header: React.FunctionComponent = () => {
   return (
-    <div id='app-header'>Markdown Notepad</div>
+    <div id='app-header'>
+      <h2>Markdown Notepad</h2>
+    </div>
   );
 };
 

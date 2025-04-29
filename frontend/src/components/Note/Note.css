@@ -13,10 +13,19 @@
   top: 0.5rem;
   right: 0.5rem;
   background-color: var(--markdown-background);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+  flex-direction: column;
+  box-shadow: 0 0 1px 0 var(--font-color);
+}
+
+.note-commands > button {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .markdown-view {

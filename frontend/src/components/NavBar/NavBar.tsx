@@ -4,6 +4,7 @@ import API from '@/api';
 import MarkdownNote from '../../types/MarkdownNoteType';
 
 import NavItem, { NavItemProps } from './NavItem';
+import { IconCirclePlus } from '@tabler/icons-react';
 
 export type NavBarProps = {
   notes: MarkdownNote[];
@@ -56,7 +57,8 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({
         className='create-note-button'
         onClick={createNote}
       >
-        Nouvelle Note
+        <IconCirclePlus size='2rem' />
+        Créer
       </button>
     </nav>
   );

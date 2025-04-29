@@ -4,6 +4,7 @@ import API from '@/api';
 import MarkdownNote from '@/types/MarkdownNoteType';
 
 import Markdown from '../Markdown';
+import { IconPencil, IconPencilCheck, IconPencilOff, IconTrash } from '@tabler/icons-react';
 
 export type NoteProps = {
   markdownNote?: MarkdownNote;
@@ -68,10 +69,18 @@ const Note: React.FunctionComponent<NoteProps> = ({
     <div className='note-container'>
       {!!markdownNote && (
         <div className='note-commands'>
-          {(mode == 'view') && <button onClick={startEditing}>Edit</button>}
-          {(mode === 'edit') && <button onClick={save}>Save</button>}
-          {(mode === 'edit') && <button onClick={() => setMode('view')}>Quit</button>}
-          <button onClick={remove}>Delete</button>
+          {(mode == 'view') && (
+            <button onClick={startEditing} title='Editer'><IconPencil /></button>
+          )}
+          {(mode == 'view') && (
+            <button onClick={remove} title='Supprimer'><IconTrash color='red' /></button>
+          )}
+          {(mode === 'edit') && (
+            <button onClick={save} title='Enregistrer'><IconPencilCheck color='green' /></button>
+          )}
+          {(mode === 'edit') && (
+            <button onClick={() => setMode('view')} title='Annuler'><IconPencilOff /></button>
+          )}
         </div>
       )}
 

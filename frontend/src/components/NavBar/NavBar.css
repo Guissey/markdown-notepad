@@ -26,5 +26,14 @@
 }
 
 .create-note-button {
+  background-color: var(--primary);
+  border-radius: 1.5rem;
+  width: fit-content;
+  margin: auto;
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }

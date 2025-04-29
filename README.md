@@ -14,11 +14,15 @@ Features:
 
 TODO:
 - Buttons ergonomy
+- Validation modal for deletion
+- Optimistic update
+- Offline mode
 - Images import
-- Re-ordering
+- Re-ordering / Tree structure
 - Responsivity for mobile browsers
+- Color in code blocks
 - HTTPS
-- User authentification and note attribution
+- User authentification and notes attribution
 - Backup
 
 ## Getting started
