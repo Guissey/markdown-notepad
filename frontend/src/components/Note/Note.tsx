@@ -4,7 +4,7 @@ import API from '@/api';
 import MarkdownNote from '@/types/MarkdownNoteType';
 
 import Markdown from '../Markdown';
-import { IconPencil, IconPencilCheck, IconPencilOff, IconTrash } from '@tabler/icons-react';
+import NoteCommands from './NoteCommands';
 
 export type NoteProps = {
   markdownNote?: MarkdownNote;
@@ -68,45 +68,36 @@ const Note: React.FunctionComponent<NoteProps> = ({
   return (
     <div className='note-container'>
       {!!markdownNote && (
-        <div className='note-commands'>
-          {(mode == 'view') && (
-            <button onClick={startEditing} title='Editer'><IconPencil /></button>
-          )}
-          {(mode == 'view') && (
-            <button onClick={remove} title='Supprimer'><IconTrash color='red' /></button>
-          )}
-          {(mode === 'edit') && (
-            <button onClick={save} title='Enregistrer'><IconPencilCheck color='green' /></button>
-          )}
-          {(mode === 'edit') && (
-            <button onClick={() => setMode('view')} title='Annuler'><IconPencilOff /></button>
-          )}
-        </div>
+        <NoteCommands
+          mode={mode}
+          startEditing={startEditing}
+          stopEditing={() => setMode('view')}
+          save={save}
+          remove={remove}
+        />
       )}
 
-      {(mode === 'view')
-        ? (
-          <Markdown
-            className='markdown-view'
-            markdown={markdownNote ? (markdownNote.markdown || '**Aucun contenu**') : '**Sélectionner une note**'}
+      {(mode === 'view') ? (
+        <Markdown
+          className='markdown-view'
+          markdown={markdownNote ? (markdownNote.markdown || '**Aucun contenu**') : '**Sélectionner une note**'}
+        />
+      ) : (
+        <>
+          <textarea
+            className='markdown-input'
+            value={markdownDraft}
+            onChange={onChangeDraft}
+            onSelect={onSelectDraft}
           />
-        )
-        : (
-          <>
-            <textarea
-              className='markdown-input'
-              value={markdownDraft}
-              onChange={onChangeDraft}
-              onSelect={onSelectDraft}
-            />
 
-            <Markdown
-              ref={markdownViewRef}
-              className='markdown-view'
-              markdown={markdownDraft || '**Aucun contenu**'}
-            />
-          </>
-        )}
+          <Markdown
+            ref={markdownViewRef}
+            className='markdown-view'
+            markdown={markdownDraft || '**Aucun contenu**'}
+          />
+        </>
+      )}
     </div>
   );
 };

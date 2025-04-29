@@ -62,7 +62,7 @@ const stylisticRules = {
       singleline: { delimiter: 'semi' },
     },
   ],
-  '@stylistic/multiline-ternary': ['warn', 'always-multiline'],
+  '@stylistic/multiline-ternary': ['warn', 'always-multiline', { ignoreJSX: true }], // Override: ignore JSX
   '@stylistic/new-parens': 'warn',
   '@stylistic/no-extra-parens': ['warn', 'functions'],
   '@stylistic/no-floating-decimal': 'warn',

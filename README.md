@@ -13,8 +13,7 @@ Features:
 - **Create**, **Delete**, **Rename**, **Edit** notes.
 
 TODO:
-- Buttons ergonomy
-- Validation modal for deletion
+- Sizes for h1, h2, h3, h4
 - Optimistic update
 - Offline mode
 - Images import
