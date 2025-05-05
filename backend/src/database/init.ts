@@ -1,5 +1,5 @@
-import { Note } from "./models";
-import { NOTE_SAMPLES } from "./samples";
+import { Note } from './models';
+import { NOTE_SAMPLES } from './samples';
 
 export default async function initDatabase(): Promise<void> {
   try {
@@ -9,7 +9,6 @@ export default async function initDatabase(): Promise<void> {
     } else {
       await Note.sync();
     }
-    const allNotes = await Note.findAll();
   } catch (error) {
     console.log('Database initialisation failed', error);
   }

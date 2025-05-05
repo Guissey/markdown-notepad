@@ -13,7 +13,7 @@ Features:
 - **Create**, **Delete**, **Rename**, **Edit** notes.
 
 TODO:
-- Sizes for h1, h2, h3, h4
+- Sizes for h1, h2, h3, h4 / Responsive font size
 - Optimistic update
 - Offline mode
 - Images import
@@ -33,7 +33,8 @@ TODO:
 - npm >= 10
 - MySQL server installed and running with:
   - databases *markdown_notepad* and *markdown_notepad_test*
-  - user *webserver* and password *webserver* with rights on the previous databases
+  - user *admin* and password *admin* with rights on the previous databases
+  - These values can be changed by copying *backend/.env* into *backend/.env.local* and editing the variables
 
 ### Installation
 

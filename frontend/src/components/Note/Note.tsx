@@ -39,7 +39,10 @@ const Note: React.FunctionComponent<NoteProps> = ({
   };
 
   const save = async (): Promise<void> => {
-    if (!markdownNote) return;
+    if (!markdownNote || (markdownDraft == markdownNote.markdown)) {
+      setMode('view');
+      return;
+    }
     try {
       const updatedNote = await API.updateNote({ id: markdownNote.id, markdown: markdownDraft });
       updateNote(updatedNote);

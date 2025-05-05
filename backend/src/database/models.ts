@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
-import sequelize from "./connector";
+import connector from './connector';
 
-export const Note = sequelize.define('Note', {
+export const Note = connector.define('Note', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

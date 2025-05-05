@@ -18,7 +18,7 @@ export default class API {
 
   static fetchNotes = async (): Promise<MarkdownNote[]> => {
     try {
-      const res = await fetch(this.origin + '/notes');
+      const res = await fetch(this.origin + '/note/all');
       if (!res.ok) throw new Error(`Fetching notes failed: ${this.getErrorDetais(res)}`);
       const json = await res.json() as MarkdownNote[];
       console.log('Received notes', json);

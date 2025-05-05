@@ -39,11 +39,11 @@ const NoteCommands: React.FunctionComponent<NoteCommandsProps> = ({
         </>
       ) : (
         <>
-          <button onClick={save} title='Enregistrer'>
-            <IconPencilCheck color='green' />
-          </button>
           <button onClick={stopEditing} title='Annuler'>
             <IconPencilOff color='var(--primary)' />
+          </button>
+          <button onClick={save} title='Enregistrer'>
+            <IconPencilCheck color='green' />
           </button>
         </>
       )}
